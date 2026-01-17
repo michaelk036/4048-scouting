@@ -1,0 +1,88 @@
+[
+    {
+        "type": "header",
+        "label": "Pit Form"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "subheader",
+        "label": "Drive Train"
+    },
+    {
+        "type": "multiselect",
+        "label": "Drive Base Type",
+        "options": [
+            "Swerve",
+            "Tank",
+            "Mecanum",
+            "Other"
+        ],
+        "id": "driveBaseType"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "subheader",
+        "label": "General"
+    },
+    {
+        "type": "counter",
+        "label": "Maximum Fuel Capacity",
+        "id": "maxFuel",
+        "allow_negative": false,
+        "variant": "standard"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they intake from the ground?",
+        "id": "gndIntake"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they intake from the chute?",
+        "id": "chuteIntake"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they deliver to the corrale",
+        "id": "deliverCorrale"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they go over the bump?",
+        "id": "overBump"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they go under the trench?",
+        "id": "underTrench"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "subheader",
+        "label": "Auto"
+    },
+    {
+        "type": "textblock",
+        "label": "Can they run an auto from any starting position?",
+        "id": "autoStart"
+    },
+    {
+        "type": "textblock",
+        "label": "Describe their auto:",
+        "id": "auto"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "textblock",
+        "label": "Comments/Notes",
+        "id": "comment"
+    }
+]

@@ -1,0 +1,145 @@
+[
+    {
+        "type": "header",
+        "label": "Match Form"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "checkbox",
+        "label": "Robot is not present for the match",
+        "id": "notPresent"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "subheader",
+        "label": "Auto"
+    },
+    {
+        "type": "counter",
+        "label": "Fuel scored into an active hub",
+        "id": "autoFuel",
+        "allow_negative": false,
+        "variant": "standard"
+    },
+    {
+        "type": "checkbox",
+        "label": "Did they climb?",
+        "id": "autoClimb"
+    },
+    {
+        "type": "checkbox",
+        "label": "Did they de-climb?",
+        "id": "autoDeClimb"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "subheader",
+        "label": "Teleop"
+    },
+    {
+        "type": "counter",
+        "label": "Fuel scored into an active hub",
+        "id": "teleopFuel",
+        "allow_negative": false,
+        "variant": "standard"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "subheader",
+        "label": "Endgame"
+    },
+    {
+        "type": "multiselect",
+        "label": "State robot status at the end of the match:",
+        "options": [
+            "Not Climbing",
+            "Level 1",
+            "Level 2",
+            "Level 3"
+        ],
+        "id": "teleopClimb"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "subheader",
+        "label": "General"
+    },
+    {
+        "type": "checkbox",
+        "label": "Did they intake from the ground?",
+        "id": "gndIntake"
+    },
+    {
+        "type": "checkbox",
+        "label": "Did they intake from the chute?",
+        "id": "chuteIntake"
+    },
+    {
+        "type": "checkbox",
+        "label": "Did they deliver to the corrale",
+        "id": "deliverCorrale"
+    },
+    {
+        "type": "checkbox",
+        "label": "Did they go over the bump?",
+        "id": "overBump"
+    },
+    {
+        "type": "checkbox",
+        "label": "Did they go under the trench?",
+        "id": "underTrench"
+    },
+    {
+        "type": "checkbox",
+        "label": "Did they shuttle fuel?",
+        "id": "shuttle"
+    },
+    {
+        "type": "checkbox",
+        "label": "Did they play defense?",
+        "id": "defense"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "textblock",
+        "label": "Comments/Notes",
+        "id": "comment"
+    },
+    {
+        "type": "derived",
+        "formula": "autoFuel+(autoClimb*15)",
+        "id": "autoPoints"
+    },
+    {
+        "type": "derived",
+        "formula": "teleopFuel+multiselect(teleopClimb, 'Not Climbing', 0, 'Level 1', 10, 'Level 2', 20, 'Level 3', 30)",
+        "id": "teleopPoints"
+    },
+    {
+        "type": "derived",
+        "formula": "multiselect(teleopClimb, 'Not Climbing', 0, 'Level 1', 10, 'Level 2', 20, 'Level 3', 30)",
+        "id": "endGamePoints"
+    },
+    {
+        "type": "derived",
+        "formula": "autoPoints+teleopPoints",
+        "id": "contributedPoints"
+    },
+    {
+        "type": "derived",
+        "formula": "autoFuel+teleopFuel",
+        "id": "totalFuelScored"
+    }
+]
