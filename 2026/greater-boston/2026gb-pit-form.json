@@ -47,8 +47,8 @@
     },
     {
         "type": "checkbox",
-        "label": "Can they deliver to the corral",
-        "id": "deliverCorrale"
+        "label": "Can they deliver to the corral?",
+        "id": "deliverCorral"
     },
     {
         "type": "checkbox",
