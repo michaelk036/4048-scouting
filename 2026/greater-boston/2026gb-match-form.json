@@ -1,7 +1,7 @@
 [
     {
         "type": "header",
-        "label": "Match Form"
+        "label": "Match Scouting Form"
     },
     {
         "type": "spacer"
@@ -27,12 +27,12 @@
     },
     {
         "type": "checkbox",
-        "label": "Did they climb?",
+        "label": "Did they climb (in auto)?",
         "id": "autoClimb"
     },
     {
         "type": "checkbox",
-        "label": "Did they de-climb?",
+        "label": "Did they de-climb (in auto)?",
         "id": "autoDeClimb"
     },
     {
@@ -86,8 +86,8 @@
     },
     {
         "type": "checkbox",
-        "label": "Did they deliver to the corrale",
-        "id": "deliverCorrale"
+        "label": "Did they deliver to the corral",
+        "id": "deliverCorral"
     },
     {
         "type": "checkbox",
