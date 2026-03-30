@@ -8,7 +8,7 @@
   },
   {
     "type": "subheader",
-    "label": "Where is your robot at the begining of the match?"
+    "label": "Where is your robot at the beginning of the match?"
   },
   {
     "type": "image",
@@ -132,12 +132,12 @@
   },
   {
     "type": "derived",
-    "formula": "allianceFuel * fuelContributionPercent",
+    "formula": "allianceFuel * (fuelContributionPercent/100)",
     "id": "contributedFuel"
   },
   {
     "type": "derived",
-    "formula": "(allianceScore / 3) - contributedFuel",
+    "formula": "contributedFuel - (allianceFuel / 3)",
     "id": "fuelDeviation"
   }
 ]
